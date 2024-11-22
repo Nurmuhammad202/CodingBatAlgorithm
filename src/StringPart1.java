@@ -29,4 +29,17 @@ public class StringPart1 {
                 str.substring(str.length() - 1) +
                 str.charAt(str.length() - 2);
     }
+
+    public String conCat(String a, String b) {
+
+        if(a.isEmpty()) return b;
+        if(b.isEmpty()) return a;
+
+        if(a.substring(a.length()-1).equals(b.substring(0,1))) {
+            return a.substring(0, a.length()-1) + b;
+        } else {
+            return a + b;
+        }
+
+    }
 }
