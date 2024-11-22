@@ -65,4 +65,18 @@ public class StringPart1 {
     public String middleTwo(String str) {
         return str.substring(str.length()/2 -1,str.length()/2+1);
     }
+
+    public String deFront(String str) {
+        if(str.length() < 2) return str;
+
+        char first = str.charAt(0);
+        char second = str.charAt(1);
+
+        StringBuilder builder = new StringBuilder();
+        if (first == 'a') builder.append(first);
+        if (second == 'b') builder.append(second);
+        builder.append(str.substring(2));
+
+        return builder.toString();
+    }
 }
