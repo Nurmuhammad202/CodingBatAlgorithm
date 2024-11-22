@@ -79,4 +79,10 @@ public class StringPart1 {
 
         return builder.toString();
     }
+
+    public String withouEnd2(String str) {
+        if(str.length() <=2) return "";
+
+        return str.substring(1,str.length()-1);
+    }
 }
