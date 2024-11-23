@@ -93,4 +93,13 @@ public class StringPart1 {
             return str.substring(str.length()-1);
         }
     }
+
+    public String helloName(String name) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(name);
+        builder.append(" ");
+        builder.append(name);
+        builder.append("!");
+        return builder.toString();
+    }
 }
