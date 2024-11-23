@@ -102,4 +102,11 @@ public class StringPart1 {
         builder.append("!");
         return builder.toString();
     }
+
+    public String makeTags(String tag, String word) {
+        String start = "<";
+        String end = ">";
+
+        return start + tag + end + word + start + "/" +tag +end;
+    }
 }
