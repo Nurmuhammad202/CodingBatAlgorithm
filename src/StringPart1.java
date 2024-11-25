@@ -113,4 +113,19 @@ public class StringPart1 {
     public String makeOutWord(String out, String word) {
         return out.substring(0,2) + word + out.substring(2,4);
     }
+
+    public String withoutX(String str) {
+        if(str.isEmpty()) return str;
+
+        String newWord = str;
+        if(str.startsWith("x")){
+            newWord =  newWord.substring(1);
+        }
+
+        if(str.endsWith("x")) {
+            newWord = newWord.substring(str.length() - 1);
+        }
+        return newWord;
+    }
+
 }

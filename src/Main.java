@@ -5,5 +5,7 @@ public class Main {
 
         StringPart1 part1 = new StringPart1();
 
+        System.out.println(part1.withoutX("Hix"));
+
     }
 }
