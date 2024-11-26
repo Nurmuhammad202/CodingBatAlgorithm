@@ -40,4 +40,47 @@ public class Array1WithJava {
         int sum = 0;
         return Arrays.stream(nums).sum();
     }
+
+    public int[] rotateLeft3(int[] nums) {
+
+        int[] newNums = new int[nums.length];
+        for (int i = nums.length; i > 0; i--) {
+            newNums[i] = nums[i];
+        }
+
+        return newNums;
+    }
+
+    public String withoutX(String str) {
+        if(str.isEmpty()) return str;
+
+        boolean isFirstX = str.startsWith("x");
+        boolean isSecondX = str.endsWith("x");
+        if(isFirstX && isSecondX) {
+            return str.substring(1,str.length()-1);
+        } else if(isFirstX) {
+            return str.substring(1);
+        } else if(isSecondX) {
+            return str.substring(0,str.length()-1);
+        } else {
+            return str;
+        }
+    }
+
+    public String startWord(String str, String word) {
+        if (str.length() < word.length()) {
+            return "";
+        }
+
+        // Extract the substring of `str` of the same length as `word`
+        String strPart = str.substring(0, word.length());
+
+        // Check if the substring matches the word, ignoring the first character
+        if (strPart.substring(1).equals(word.substring(1))) {
+            return strPart;
+        }
+
+        return ""; // No match
+    }
+
 }
