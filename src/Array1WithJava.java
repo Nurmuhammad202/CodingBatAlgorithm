@@ -1,13 +1,14 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Array1WithJava {
 
     public boolean firstLast6(int[] nums) {
-        return ( nums[0] == 6 || nums[nums.length-1] == 6) ;
+        return (nums[0] == 6 || nums[nums.length - 1] == 6);
     }
 
     public boolean sameFirstLast(int[] nums) {
-        return (nums.length >= 1 && (nums[0] == nums[nums.length-1]));
+        return (nums.length >= 1 && (nums[0] == nums[nums.length - 1]));
     }
 
     public int[] makePi() {
@@ -20,14 +21,14 @@ public class Array1WithJava {
     }
 
     public String withoutX2(String str) {
-        if(str.length() < 2) return  "";
+        if (str.length() < 2) return "";
 
         boolean isFirstX = str.charAt(0) == 'x';
         boolean isSecondX = str.charAt(1) == 'x';
 
-        if(isFirstX && isSecondX) {
+        if (isFirstX && isSecondX) {
             return str.substring(2);
-        }else if(isFirstX) {
+        } else if (isFirstX) {
             return str.substring(1);
         } else if (isSecondX) {
             return str.charAt(0) + str.substring(2);
@@ -43,25 +44,20 @@ public class Array1WithJava {
 
     public int[] rotateLeft3(int[] nums) {
 
-        int[] newNums = new int[nums.length];
-        for (int i = nums.length; i > 0; i--) {
-            newNums[i] = nums[i];
-        }
-
-        return newNums;
+        return new int[] { nums[1], nums[2], nums[0] };
     }
 
     public String withoutX(String str) {
-        if(str.isEmpty()) return str;
+        if (str.isEmpty()) return str;
 
         boolean isFirstX = str.startsWith("x");
         boolean isSecondX = str.endsWith("x");
-        if(isFirstX && isSecondX) {
-            return str.substring(1,str.length()-1);
-        } else if(isFirstX) {
+        if (isFirstX && isSecondX) {
+            return str.substring(1, str.length() - 1);
+        } else if (isFirstX) {
             return str.substring(1);
-        } else if(isSecondX) {
-            return str.substring(0,str.length()-1);
+        } else if (isSecondX) {
+            return str.substring(0, str.length() - 1);
         } else {
             return str;
         }
