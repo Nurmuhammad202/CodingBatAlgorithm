@@ -79,4 +79,15 @@ public class Array1WithJava {
         return ""; // No match
     }
 
+    public int[] makeEnds(int[] nums) {
+        if(nums.length <2) return new int[] { nums[0] };
+
+        return new int[] { nums[0] , nums[nums.length-1] };
+    }
+
+    public boolean has23(int[] nums) {
+        return (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3 );
+    }
+
+
 }
