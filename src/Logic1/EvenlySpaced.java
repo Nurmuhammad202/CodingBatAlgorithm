@@ -8,13 +8,7 @@ public class EvenlySpaced {
         list[0] = a;
         list[1] = b;
         list[2] = c;
-
-        Arrays.stream(list).sorted();
-
-        for (int j : list) {
-            System.out.println(j);
-        }
-        return true;
+        return false;
     }
 
     public static void main(String[] args) {
