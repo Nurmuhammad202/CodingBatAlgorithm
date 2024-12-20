@@ -4,15 +4,27 @@ import java.util.Arrays;
 
 public class EvenlySpaced {
     public static boolean evenlySpaced(int a, int b, int c) {
-        int[] list = new int[3];
-        list[0] = a;
-        list[1] = b;
-        list[2] = c;
-        return false;
+        if (a == b && a == c) return true;
+        if (a == b || b == c || a == c) return false;
+
+        if (Math.abs(a - b) == Math.abs(b - c)) {
+            return true;
+        } else if (Math.abs(b - a) == Math.abs(a - c)) {
+            return true;
+        } else if (Math.abs(c - a) == Math.abs(b - c)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static void main(String[] args) {
-        evenlySpaced(1,5,3);
+        evenlySpaced(1, 5, 3);
+        evenlySpaced(4, 6, 2);
+        evenlySpaced(2, 2, 3);
+        evenlySpaced(6, 2, 4);
+        evenlySpaced(2, 4, 4);
+
     }
 
 }
