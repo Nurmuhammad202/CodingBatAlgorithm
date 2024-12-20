@@ -7,7 +7,7 @@ public class EvenlySpaced {
         int[] list = new int[3];
         list[0] = a;
         list[1] = b;
-        list[2] = c;
+        list[2] = f;
         return false;
     }
 
