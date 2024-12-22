@@ -18,6 +18,6 @@ public class CatDog {
                 }
             }
         }
-        return (counterCat == counterDog );
+        return (counterCat == counterDog);
     }
 }
