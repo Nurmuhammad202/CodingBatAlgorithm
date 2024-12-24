@@ -3,9 +3,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        StringPart1 part1 = new StringPart1();
 
-        System.out.println(part1.withoutX("Hix"));
-
+        Read read = new Read();
+        read.read(null);
     }
 }
