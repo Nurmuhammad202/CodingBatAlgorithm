@@ -4,17 +4,24 @@ import java.util.ArrayList;
 
 public class MixString {
     public String mixString(String a, String b) {
-        ArrayList list = new ArrayList();
+        StringBuilder result = new StringBuilder();
 
-        char[] aList = a.toCharArray();
-        char[] bList = b.toCharArray();
+        // Get the lengths of the two strings
+        int minLength = Math.min(a.length(), b.length());
 
-        for (int i = 0; i < a.length() + b.length(); i++) {
-            if(aList.length > i) {
-
-            }
+        // Iterate through the characters of both strings up to the length of the shorter string
+        for (int i = 0; i < minLength; i++) {
+            result.append(a.charAt(i)); // Add character from string 'a'
+            result.append(b.charAt(i)); // Add character from string 'b'
         }
 
-        return "salo1m";
+        // Append the remaining characters of the longer string
+        if (a.length() > minLength) {
+            result.append(a.substring(minLength));
+        } else if (b.length() > minLength) {
+            result.append(b.substring(minLength));
+        }
+
+        return result.toString();
     }
 }
