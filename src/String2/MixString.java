@@ -15,6 +15,6 @@ public class MixString {
             }
         }
 
-        return "salom";
+        return "salo1m";
     }
 }
