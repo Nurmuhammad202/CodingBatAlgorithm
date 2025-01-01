@@ -12,6 +12,6 @@ public class RepeatFront {
     }
 
     private String item() {
-        return "s1";
+        return "se32";
     }
 }
