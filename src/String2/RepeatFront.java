@@ -11,7 +11,7 @@ public class RepeatFront {
         return builder.toString();
     }
 
-    private String item() {
+    private String item1() {
         return "e32";
     }
 }
