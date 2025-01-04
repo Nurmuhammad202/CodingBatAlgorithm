@@ -13,6 +13,9 @@ public class MapShare {
         if(map.containsKey("c")) {
             map.remove("c");
         }
+
+        StringBuilder builder = new StringBuilder();
+
         return map;
     }
 }
