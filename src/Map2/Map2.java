@@ -17,3 +17,28 @@ public class Map2 {
         return sortedMap;
     }
 }
+
+interface QueCustom {
+    void readDate();
+}
+
+interface OnItemClicklistener {
+    void click();
+}
+
+interface DeQueCustom extends QueCustom, OnItemClicklistener {
+
+}
+
+class Per implements DeQueCustom {
+
+    @Override
+    public void readDate() {
+
+    }
+
+    @Override
+    public void click() {
+
+    }
+}
