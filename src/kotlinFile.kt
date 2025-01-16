@@ -1,32 +1,29 @@
-import javax.lang.model.type.UnionType
-import kotlin.random.Random
-
-inline fun minus(
-    noinline action: (Int) -> Unit,
-    calculate: (String) -> Unit,
-    listener: (String) -> Unit
-) {
-    action(read())
-    calculate("Hello")
-
-    listener("listener")
-//    Thread {
-//        listener("Hello")
-//    }.start()
-}
-
-fun read(): Int {
-    return Random.nextInt();
-}
+import java.util.LinkedList
 
 fun main() {
-    minus(action = {
-        println(it)
-    }, calculate = {
-        println(it)
-    }, listener = {
-        println(it)
-        return
-    })
+    val list = listOf(1,2,3)
+    val mutableList = mutableListOf(1,2,3,4)
+    mutableList.add(1)
+    mutableList.removeAt(2)
+    list
+    val array = arrayOf(1,2,3)
+    println(array.joinToString())
+    array[0] = 0
+    val array1 = Array<Int>(3, { 0 })
+    array1[0] = 1
+    array1[1] = 2
+    array1[2] = 3
+    println(array.joinToString())
+    println(array1.joinToString())
+
+
+    val setOf = setOf<Int>()
+    val mapOf = mapOf<Int,String>()
+    val listOf = listOf<Int>()
+    val linkedListOf = LinkedList(listOf(1,2,3))
+    val linkedList = LinkedList<String>()
+    linkedList.add("1")
+
+    val listOld = ArrayList<String>()
 }
 
