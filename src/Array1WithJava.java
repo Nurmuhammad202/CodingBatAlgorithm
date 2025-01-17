@@ -17,6 +17,8 @@ public class Array1WithJava {
         nums[1] = 1;
         nums[2] = 4;
 
+        StringBuilder builder = new StringBuilder();
+
         return nums;
     }
 
