@@ -1,21 +1,22 @@
-fun main() {
-    val person = Person<String>()
-    person.print("124")
+class Producer<out T>(private val value: T) {
+    fun produce(): T {
+        return value
+    }
 }
 
-interface Ex<out T> {
-    fun print(t: @UnsafeVariance T)
-}
-
-class Person<T>: Ex<T> {
-    override fun print(t: T) {
-        println(t)
-
-        (t as String).reversed()
+class Consumer<in T> {
+    fun consume(value: T) {
+        // Consume value
     }
 }
 
 
-fun <T> printSorted(items: List<T>) where T : Comparable<T> {
-    println(items.sorted()) // Faqat Comparable interfeysini implement qilgan tiplarga ruxsat
+fun main() {
+    val producer: Producer<String> = Producer("Generics")
+    val value: String = producer.produce()
+
+    val consumer: Consumer<Any> = Consumer()
+    consumer.consume("Generics")
+
+    println(value)
 }
