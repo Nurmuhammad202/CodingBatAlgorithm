@@ -1,5 +1,9 @@
 package CodingBat.String2.Map2;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,5 +31,20 @@ public class AllSwap {
         }
 
         return strings;
+    }
+
+    public static void main(String[] args) {
+        File file = new File("example.txt");
+        FileReader reader = null; // IOException yuzaga kelishi mumkin
+        try {
+            reader = new FileReader(file);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            System.out.println(reader.read());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
