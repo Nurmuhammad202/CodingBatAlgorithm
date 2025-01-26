@@ -37,6 +37,7 @@ public class AllSwap {
         File file = new File("example.txt");
         FileReader reader = null; // IOException yuzaga kelishi mumkin
         try {
+
             reader = new FileReader(file);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
