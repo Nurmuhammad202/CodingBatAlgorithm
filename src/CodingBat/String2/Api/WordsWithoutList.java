@@ -15,9 +15,6 @@ public class WordsWithoutList {
                 list.add(item);
             }
         }
-
-
-
         return list;
     }
 }
